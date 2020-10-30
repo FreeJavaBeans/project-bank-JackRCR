@@ -1,13 +1,17 @@
 package model;
 
-public class User {
+public abstract class User {
 	//may be made abstract, to segregate between customer and employee
 	
 	
-	private String name;
+	private String firstName;
+	private String lastName;
+	private String username;
 	private String password;
 	
-	private Account accounts;//does an employee need an account?  Probably not
+	public User() {
+		
+	}//end of default constructor
 	
 	
 	
