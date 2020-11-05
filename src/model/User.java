@@ -8,6 +8,7 @@ public abstract class User {
 	private String lastName;
 	private String username;
 	private String password;
+	private int idnumber;//used for identifying where the hell it came from or needs to go.
 	
 	public User() {
 		
