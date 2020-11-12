@@ -10,6 +10,9 @@ import controller.*;
 import model.Account;
 import util.ConnectionUtil;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Driver1 {
 
 	public static void main(String[] args) throws SQLException {
@@ -20,6 +23,9 @@ public class Driver1 {
 		 * reminds will make there way into here as I try and figure out what the heck
 		 * needs to be done
 		 */
+		Logger logger = LogManager.getLogger("asciibank");
+		
+		logger.debug("Program starting");
 		MenuUI basicUI = new MenuUI();
 
 		ConnectionUtil cu = ConnectionUtil.getConnectionUtil();
@@ -42,7 +48,7 @@ public class Driver1 {
 			System.out.print(results.getInt("registrationid"));
 			System.out.println(results.getString("lastname"));
 		} // end of test while for results
-*/
+
 		Statement collectAccounts = conn.createStatement();
 		ResultSet retrieval = collectAccounts.executeQuery("select accountnumber, balance, checking from accounts where customerid = 1;");
 		while (retrieval.next()) {
@@ -53,7 +59,7 @@ public class Driver1 {
 			System.out.println(number +" | "+bal+" | "+type);
 			//System.out.println("Remove:accounts were successfully added");//debug confirmation line ONLY
 		}//end of while
-		
+*/		
 		
 		
 		

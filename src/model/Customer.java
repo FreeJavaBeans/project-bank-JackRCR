@@ -91,14 +91,36 @@ public class Customer extends User {
 	}//end of option
 	
 	
-	private void transferOptions() {
+	private void transferOptions(Scanner scan) {
+		
+		Connection conn = cu.getConnection();
+		
+		
+		System.out.println("Enter source account:");
+		int source=scan.nextInt();
 		
 		System.out.println("Enter destination account:");
+		int destination=scan.nextInt();
+		System.out.println("Enter ammount:");
+		double balance=scan.nextDouble();
+		if (validate(balance)) {
+			System.out.println("Legal balance accepted.");
+			;
+		}//end of if (validate(balance))
 		
 		
 	}//end of transferOption
 	
-	
+	public boolean validate(double number) {
+		//running system checks that an invalid number entry doesn't get passed for transfers.
+		if (number<=0) {
+			System.out.println("cannot transfer zero or negative ammount");
+			return false;
+		}//end of else
+		
+		return true;
+		
+	}//end of validate
 	
 	
 	
