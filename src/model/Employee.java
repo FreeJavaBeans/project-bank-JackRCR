@@ -54,7 +54,7 @@ public class Employee extends User {
 				break;
 			}//end of case
 			case 4: {
-				//view transaction log : will just print out all the transactions from the query.
+				//view transaction log NOT IMPLEMENTED OR POSSIBLEs
 				break;
 			}//end of case
 			case 5: {

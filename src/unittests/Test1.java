@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class Test1 {
 
 	@Test
-	void test() {
+	void testCustomerValidation() {
 		Customer test=new Customer("testA", "TestB", -1);
 		
 		

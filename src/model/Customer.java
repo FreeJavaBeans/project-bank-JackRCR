@@ -51,7 +51,7 @@ public class Customer extends User {
 		while (!exitFlag) {
 		System.out.println("Your accounts:\n"+seeAccounts()
 				+ "What action do you wish to take?\n" + "(1) Request to open a new account\n"
-				+ "(2) View Balance of an account\n" + "(3) Make transfer\n" + "(4) Accept transfer\n" + "(5) Withdraw or Deposit money" + "(6) Exit");
+				+ "(2) View Balance of an account\n" + "(3) Make transfer\n" + "(4) Accept transfer\n" + "(5) Withdraw or Deposit money\n" + "(6) Exit");
 		if (scan.hasNextInt())
 			input=scan.nextInt();
 		else

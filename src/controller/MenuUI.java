@@ -197,7 +197,7 @@ public class MenuUI {
 			else {
 				System.out.println("Returning to homepage...");
 				break;
-			}
+			}//end of else
 			
 		} // end of while
 
