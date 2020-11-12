@@ -24,8 +24,9 @@ public class Driver1 {
 		 * needs to be done
 		 */
 		Logger logger = LogManager.getLogger("asciibank");
-		
 		logger.debug("Program starting");
+		
+		
 		MenuUI basicUI = new MenuUI();
 
 		ConnectionUtil cu = ConnectionUtil.getConnectionUtil();

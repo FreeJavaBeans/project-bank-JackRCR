@@ -13,7 +13,7 @@ class Test1 {
 		Customer test=new Customer("testA", "TestB", -1);
 		
 		
-		assertFalse(test.validate(-1000));
+		assertFalse(test.validate(500,-1000));
 		//assertTrue(test.validate(100));
 	}//end of test
 

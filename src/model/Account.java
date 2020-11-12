@@ -60,6 +60,23 @@ public class Account {
 		else
 			return number + ": " + balance + " | Savings";
 	}//end of toString
+
+	public int getNumber() {
+		return number;
+	}//end of getNumber
+
+	public double getBalance() {
+		return balance;
+	}//end of getBalance
+
+	public boolean isChecking() {
+		return checking;
+	}//end of isChecking
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}//end of setBalance
+
 	
 	
 	
