@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 import model.Customer;
+import model.Employee;
 import util.ConnectionUtil;
 
 public class MenuUI {
@@ -180,11 +181,10 @@ public class MenuUI {
 				ResultSet returns = search.executeQuery();
 				
 				if (returns.next()) {
-					
+					Employee login = new Employee(returns.getString("firstname"),returns.getString("lastname"),returns.getInt("employeeid"));
+					login.options(input);
+					break;//logout kicks back to the home screen.
 				} // end of if
-				else {
-
-				} // end of else
 				
 			} catch (SQLException e) {
 				System.out.println("Employee not Found");

@@ -17,6 +17,7 @@ public class Customer extends User {
 	
 	public void collectAccounts() {
 		Connection conn = cu.getConnection();
+		accounts.clear();
 		
 		try {
 			Statement collectAccounts = conn.createStatement();
@@ -58,6 +59,7 @@ public class Customer extends User {
 		switch (input) {
 		case 1: {
 			Account.createNewAccount(scan, idnumber);
+			collectAccounts();//regenerates the list of accounts to include the newly added one.  Employee approval not programmed, no filter applied.
 			break;
 		}//end of case
 		case 2: {
@@ -78,7 +80,7 @@ public class Customer extends User {
 			break;
 		}//end of case
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + input+". Must be numeric character between 1-5");
+			System.out.println("Unexpected value: " + input+". Must be numeric character between 1-5");
 		}
 		
 		
@@ -87,6 +89,23 @@ public class Customer extends User {
 		
 		
 	}//end of option
+	
+	
+	private void transferOptions() {
+		
+		System.out.println("Enter destination account:");
+		
+		
+	}//end of transferOption
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	private String seeAccounts() {
 		String output="";
